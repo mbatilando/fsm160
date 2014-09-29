@@ -1,0 +1,143 @@
+.banner {
+    background-color: #DB7E47;
+    padding: 30px 100px;
+    flex: 0 0 auto;
+    font-weight: bold;
+
+    .fsm-icon {
+        position: absolute;
+        top: 0;
+        height: 50px;
+    }
+
+    .banner-text {
+        height: 275px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        font-family: 'Montserrat';
+        position: relative;
+    }
+
+    h1 {
+        font-size: 40px;
+        width: 325px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+}
+
+.search-container {
+    flex: 1 0 auto;
+    padding: 20px;
+    background-color: white;
+
+    .search-icon {
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    .fa-user {
+        color: #BE5517;
+        position: relative;
+        top: 4px;
+        right: 7px;
+    }
+
+    input {
+        height: 26px;
+        width: 220px;
+        font-size: 16px;
+        border: 2px solid #DB7E47;
+        border-radius: 20px;
+        padding: 5px 15px;
+        color: #535151;
+    }
+}
+
+.fsm-photos-container {
+    flex: 1 1 auto;
+    padding: 50px;
+    font-family: 'Open Sans';
+    min-height: 250px;
+
+    &.flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+    .no-pics {
+        font-size: 55px;
+        font-weight: bold;
+        color: #bdc3c7;
+    }
+
+    .fsm-photo {
+        width: 375px;
+        overflow: hidden;
+
+        .image {
+            height: 220px;
+        }
+    }
+
+    .fsm-information {
+        text-align: center;
+
+        .author {
+            display: block;
+            margin: 5px;
+            font-style: italic;
+        }
+
+        .title {
+            display: block;
+            margin: 5px;
+            font-weight: bold;
+        }
+    }
+}
+
+.grid li {
+    display: inline-block;
+    border: solid 1px #ccc;
+    margin: 0 0 10px 10px;
+    background: white;
+}
+
+/**** Transitions ****/
+.masonry {
+}
+
+.masonry,
+.masonry li { /* apply before masonry add class */
+    position: absolute; /* important to add it before enter animation start */
+    -webkit-transition-duration: .7s;
+    transition-duration: .7s;
+    -webkit-transition-property: all;
+    transition-property: all;
+}
+
+.masonry .masonry-enter { /* limit animated properties for entering elements */
+    -webkit-transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+.masonry-enter,
+.masonry-leave.masonry-leave-active {
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+    transform: scale(0.1);
+}
+
+.masonry-leave,
+.masonry-enter.masonry-enter-active {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}

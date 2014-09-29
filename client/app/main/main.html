@@ -1,0 +1,30 @@
+<div class="banner">
+  <div class="banner-text">
+    <img class="fsm-icon" src="assets/images/logo.png">
+    <h1>FREE SPEECH MOVEMENT</h1>
+  </div>
+</div>
+
+<div class="search-container">
+  <div class="search-icon">
+    <i class="fa fa-user fa-2x"></i><input type="text" ng-model="searchFilter" placeholder="Author"/>
+  </div>
+</div>
+
+<div class="fsm-photos-container" ng-class="{ flex: !flickrService.photos.length }">
+    <div class="no-pics" ng-show="!flickrService.photos.length">
+      <span>No Pictures :(</span>
+    </div>
+    <ul class="grid" masonry="true" ng-show="flickrService.photos.length">
+        <li class="fsm-photo" ng-repeat="item in flickrService.photos | filter: { ownername: searchFilter } | orderBy: order">
+            <a target="blank" href="http://farm{{item.farm}}.staticflickr.com/{{item.server}}/{{item.id}}_{{item.secret}}_z.jpg">
+              <div class="image" style="background-image: url(https://farm{{item.farm}}.staticflickr.com/{{item.server}}/{{item.id}}_{{item.secret}}_z.jpg)">
+              </div>
+            </a>
+            <div class="fsm-information">
+              <span class="title">{{item.title}}</span>
+              <span class="author">{{item.ownername}}</span>
+            </div>
+        </li>
+    </ul>
+</div>

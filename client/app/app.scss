@@ -1,0 +1,33 @@
+
+$fa-font-path: "/bower_components/font-awesome/fonts";
+
+@import 'font-awesome/scss/font-awesome';
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	background-color: #E9EAEB;
+	min-width: 830px;
+}
+
+input:focus{
+    outline: 0;
+}
+
+.root-view {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'main/main.scss';
+@import 'reset.scss';
+// endinjector
