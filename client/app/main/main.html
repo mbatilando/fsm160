@@ -18,8 +18,9 @@
     <ul class="grid" masonry="true" ng-show="flickrService.photos.length">
         <li class="fsm-photo" ng-repeat="item in flickrService.photos | filter: { ownername: searchFilter } | orderBy: order">
             <a target="blank" href="http://farm{{item.farm}}.staticflickr.com/{{item.server}}/{{item.id}}_{{item.secret}}_z.jpg">
-              <div class="image" style="background-image: url(https://farm{{item.farm}}.staticflickr.com/{{item.server}}/{{item.id}}_{{item.secret}}_z.jpg)">
-              </div>
+              <img class="image" src="https://farm{{item.farm}}.staticflickr.com/{{item.server}}/{{item.id}}_{{item.secret}}_n.jpg">
+              <!-- <div class="image" style="background-image: url(https://farm{{item.farm}}.staticflickr.com/{{item.server}}/{{item.id}}_{{item.secret}}_z.jpg)">
+              </div> -->
             </a>
             <div class="fsm-information">
               <span class="title">{{item.title}}</span>

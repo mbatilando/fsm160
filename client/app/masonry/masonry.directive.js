@@ -16,7 +16,8 @@ angular.module('fsm160App')
 
             return function (scope, element, attrs) {
                 var options = angular.extend({
-                    itemSelector: itemSelector
+                    itemSelector: itemSelector,
+                    isFitWidth: true
                 }, scope.$eval(attrs.masonry));
 
                 // try to infer model from ngRepeat

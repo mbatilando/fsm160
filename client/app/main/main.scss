@@ -78,11 +78,11 @@
     }
 
     .fsm-photo {
-        width: 375px;
-        overflow: hidden;
+        // width: 375px;
+        // overflow: hidden;
 
         .image {
-            height: 220px;
+            width: 220px;
         }
     }
 
@@ -92,12 +92,14 @@
         .author {
             display: block;
             margin: 5px;
+            width: 210px;
             font-style: italic;
         }
 
         .title {
             display: block;
             margin: 5px;
+            width: 210px;
             font-weight: bold;
         }
     }
@@ -106,12 +108,14 @@
 .grid li {
     display: inline-block;
     border: solid 1px #ccc;
-    margin: 0 0 10px 10px;
+    // margin: 0 0 10px 10px;
+    margin: 5px;
     background: white;
 }
 
 /**** Transitions ****/
 .masonry {
+    margin: 0 auto;
 }
 
 .masonry,
